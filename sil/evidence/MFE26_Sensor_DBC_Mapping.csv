@@ -1,0 +1,80 @@
+﻿MFE26 — Sensors Grouped by CAN Message (Packed Together),,,,,,,,,,,,,,,,,,,,
+DBC Message Name,"ID
+(dec)","ID
+(hex)","DLC
+(bytes)","Frame
+(bits)","Used
+Bits","Signals
+in Msg",Node,Altium Net,ADC,"ADC
+Channel",Sensor Name,DBC Signal Name,"Order
+in Msg","Start
+Bit","Bit
+Len",Factor,Unit,"Bit Packing  [byte0] | [byte1] | ... (64 bits total, '.' = unused)",Transfer Function,Datasheet
+FUTEK1_Load,100,0x64,8,64,16,1,Front,CAN1,,,FR Load Cell,Load1,1,0,16,0.1,N,FRFRFRFR | FRFRFRFR | ........ | ........ | ........ | ........ | ........ | ........,"FUTEK LCM325 (digital CAN output)
+F(N) = raw_value × 0.1
+DBC: factor=0.1, offset=0  |  Range: 0–10000 N",Open Datasheet
+FUTEK2_Load,110,0x6e,8,64,16,1,Front,CAN1,,,FL Load Cell,Load2,1,0,16,0.1,N,FLFLFLFL | FLFLFLFL | ........ | ........ | ........ | ........ | ........ | ........,"FUTEK LCM325 (digital CAN output)
+F(N) = raw_value × 0.1
+DBC: factor=0.1, offset=0  |  Range: 0–10000 N",Open Datasheet
+Front_ThermistorTemps,200,0xc8,8,64,48,4,Front,ANA_IN_3,ADC1,2,Thermistor 1,Temp1,1,0,12,0.1,degC,T1T1T1T1 | T1T1T2T2 | T2T2T2T2 | T3T3T3T3 | T3T3T4T4 | T4T4T4T4 | ........ | ........,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Front,ANA_IN_4,ADC1,3,Thermistor 2,Temp2,2,12,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Front,ANA_IN_9,ADC2,0,Thermistor 3,Temp3,3,24,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Front,ANA_IN_10,ADC2,1,Thermistor 4,Temp4,4,36,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+BrakeLineTemp_Front,210,0xd2,8,64,16,1,Front,ANA_IN_6,ADC1,5,Brake Line Temp,BrakeLineTemp_Front,1,0,16,0.1,degC,BLBLBLBL | BLBLBLBL | ........ | ........ | ........ | ........ | ........ | ........,"RTD PT1000 (Callendar-Van Dusen)
+T = (R - 1000) / 3.85
+R in Ω → T in °C  |  Range: -40°C to 500°C",Open Datasheet
+Front_RotPotAngles,300,0x12c,8,64,32,2,Front,ANA_IN_5,ADC1,4,FR Rotational Potentiometer,Angle1,1,0,16,0.01,deg,FRFRFRFR | FRFRFRFR | FLFLFLFL | FLFLFLFL | ........ | ........ | ........ | ........,"RE22 Rotary Potentiometer
+angle = (adc_value / 4095) × 360°
+⚠ DBC range capped at 90° — verify mount",Open Datasheet
+,,,,,,,Front,ANA_IN_7,ADC1,6,FL Rotational Potentiometer,Angle2,2,16,16,,deg,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FROT%5FPOT%5FRE22%20%28RLS%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"RE22 Rotary Potentiometer
+angle = (adc_value / 4095) × 360°
+⚠ DBC range capped at 90° — verify mount",Open Datasheet
+Rear_RotPotAngles,500,0x1f4,8,64,32,2,Rear,ANA_IN_5,ADC1,4,RR Rotational Potentiometer,Angle1,1,0,16,0.01,deg,RRRRRRRR | RRRRRRRR | RLRLRLRL | RLRLRLRL | ........ | ........ | ........ | ........,"RE22 Rotary Potentiometer
+angle = (adc_value / 4095) × 360°
+⚠ DBC range capped at 90° — verify mount",Open Datasheet
+,,,,,,,Rear,ANA_IN_7,ADC1,6,RL Rotational Potentiometer,Angle2,2,16,16,,deg,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FROT%5FPOT%5FRE22%20%28RLS%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"RE22 Rotary Potentiometer
+angle = (adc_value / 4095) × 360°
+⚠ DBC range capped at 90° — verify mount",Open Datasheet
+Rear_ThermistorTemps,600,0x258,8,64,48,4,Rear,ANA_IN_4,ADC1,3,Thermistor 1,Temp1,1,0,12,0.1,degC,T1T1T1T1 | T1T1T2T2 | T2T2T2T2 | T3T3T3T3 | T3T3T4T4 | T4T4T4T4 | ........ | ........,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Rear,ANA_IN_3,ADC1,2,Thermistor 2,Temp2,2,12,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Rear,ANA_IN_9,ADC2,0,Thermistor 3,Temp3,3,24,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+,,,,,,,Rear,ANA_IN_10,ADC2,1,Thermistor 4,Temp4,4,36,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FCOOLING%5FTEMP%5FGE%2D1711%20%28Amphenol%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"GE-1711 NTC Thermistor (Steinhart-Hart)
+1/T(K) = 1.1324×10⁻³ + 2.3349×10⁻⁴·ln(R) + 9.0916×10⁻⁸·ln(R)³
+T(°C) = 1/(A+B·ln(R)+C·ln(R)³) - 273.15  |  Max fit error: ±0.03°C",Open Datasheet
+OilTemps,700,0x2bc,8,64,24,2,Front,ANA_IN_2,ADC1,1,FR Oil Temp,OilTemp_Engine,1,0,12,0.1,degC,FRFRFRFR | FRFRFLFL | FLFLFLFL | ........ | ........ | ........ | ........ | ........,"KTY84 PTC Thermistor (quadratic fit)
+T = -0.00005258·R² + 0.26685·R - 113.07
+R in Ω  →  T in °C  |  Max fit error: ±4.8°C",Open Datasheet
+,,,,,,,Front,ANA_IN_8,ADC1,7,FL Oil Temp,OilTemp_Gearbox,2,12,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FOIL%5FTEMP%5FSTS1%20%28cantherm%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"KTY84 PTC Thermistor (quadratic fit)
+T = -0.00005258·R² + 0.26685·R - 113.07
+R in Ω  →  T in °C  |  Max fit error: ±4.8°C",Open Datasheet
+Rear_OilTemps,720,0x2d0,8,64,36,3,Rear,ANA_IN_2,ADC1,1,RR Oil Temp,OilTemp1,1,0,12,0.1,degC,RRRRRRRR | RRRRRLRL | RLRLRLRL | BLBLBLBL | BLBL.... | ........ | ........ | ........,"KTY84 PTC Thermistor (quadratic fit)
+T = -0.00005258·R² + 0.26685·R - 113.07
+R in Ω  →  T in °C  |  Max fit error: ±4.8°C",Open Datasheet
+,,,,,,,Rear,ANA_IN_8,ADC1,7,RL Oil Temp,OilTemp2,2,12,12,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FOIL%5FTEMP%5FSTS1%20%28cantherm%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"KTY84 PTC Thermistor (quadratic fit)
+T = -0.00005258·R² + 0.26685·R - 113.07
+R in Ω  →  T in °C  |  Max fit error: ±4.8°C",Open Datasheet
+,,,,,,,Rear,ANA_IN_6,ADC1,5,Brake Line Temp,BrakeLineTemp_Rear,3,24,12,,degC,https://www.sliceengineering.com/en-ca/products/rtd-pt1000?variant=42832499572977,"RTD PT1000 (Callendar-Van Dusen)
+T = (R - 1000) / 3.85
+R in Ω → T in °C  |  Range: -40°C to 500°C",Open Datasheet
+BrakeRotorTemps,800,0x320,8,64,32,2,Front,ANA_IN_15,ADC2,6,FL Brake Rotor Temp,BrakeTemp_FL,1,0,16,0.1,degC,FLFLFLFL | FLFLFLFL | FRFRFRFR | FRFRFRFR | ........ | ........ | ........ | ........,"INFKL-800 Infrared (linear)
+T(°C) = 200·V − 100
+V in volts → T in °C  |  Slope: 5 mV/°C
+Range: 0–800°C  (V: 0.50–4.50)  |  Perfect linear fit",Open Datasheet
+,,,,,,,Front,ANA_IN_14,ADC2,5,FR Brake Rotor Temp,BrakeTemp_FR,2,16,16,,degC,https://mcgill-my.sharepoint.com/shared?listurl=https%3A%2F%2Fmcgill%2Esharepoint%2Ecom%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents&viewid=3bb90c07%2D85aa%2D4b3f%2Da904%2D632e8b474b1e&id=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26%2FBRAKE%5FROTOR%5FTEMP%5FINFKL%2D800%20%28TEXYS%29%2Epdf&parent=%2Fsites%2FMcGillFormulaElectric912%5FGroup%2FShared%20Documents%2FMFE26%2F06%20Subsystems%2F20%20DAQ%2FSENSOR%5FDATASHEETS%5F26,"INFKL-800 Infrared (linear)
+T(°C) = 200·V − 100
+V in volts → T in °C  |  Slope: 5 mV/°C
+Range: 0–800°C  (V: 0.50–4.50)  |  Perfect linear fit",Open Datasheet

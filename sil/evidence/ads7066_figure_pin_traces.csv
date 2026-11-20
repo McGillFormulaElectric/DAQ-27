@@ -1,0 +1,5 @@
+trace_id,archived_evidence,evidence_sha256,locator,model_observation
+ADS-TRACE-CS-SDO,ADS7066-RevC-SBAS928C.pdf,26E7ABC2644592C329615F2989AAB3B76ECB78DF47354D71D60022B76AD389EF,"Figure 6-1; Tables 5-1 and 6-7","SDO high impedance while CS is high and driven only during an active frame"
+ADS-TRACE-CONV-CS,ADS7066-RevC-SBAS928C.pdf,26E7ABC2644592C329615F2989AAB3B76ECB78DF47354D71D60022B76AD389EF,"Figures 7-15 through 7-18","Conversion begins on the modeled CS rising boundary after the frame"
+ADS-TRACE-SPI-EDGES,ADS7066-RevC-SBAS928C.pdf,26E7ABC2644592C329615F2989AAB3B76ECB78DF47354D71D60022B76AD389EF,"Figure 1-1; Sections 6.7 and 7.4","SDI capture and SDO launch are exercised for all four CPOL and CPHA combinations"
+ADS-TRACE-RESET,ADS7066-RevC-SBAS928C.pdf,26E7ABC2644592C329615F2989AAB3B76ECB78DF47354D71D60022B76AD389EF,"Sections 7.5.1 and 7.5.3; Table 7-9","Power software and brownout reset paths converge on the same digital reset state"
