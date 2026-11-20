@@ -1,0 +1,574 @@
+VERSION "100"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: C185
+
+
+BO_ 2636251137 Display_1: 8 C185
+ SG_ Steering_Angle : 7|16@0- (0.1,0) [-100|100] "deg"  Vector__XXX
+ SG_ SOC : 23|32@0- (1E-06,0) [0|0] "ratio"  Vector__XXX
+ SG_ G_Force_Lat : 55|16@0- (0.01,0) [-500|500] "G"  Vector__XXX
+
+BO_ 2636251138 Display_2: 8 C185
+ SG_ G_Force_Long : 7|16@0- (0.01,0) [-500|500] "G"  Vector__XXX
+ SG_ G_Force_Vert : 23|16@0- (0.01,0) [-500|500] "G"  Vector__XXX
+ SG_ Angle1 : 39|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251139 Display_3: 6 C185
+ SG_ Bat_Volts_Dash : 7|16@0- (0.01,0) [0|0] "V"  Vector__XXX
+ SG_ Angle2 : 23|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251140 Display_4: 6 C185
+ SG_ BPRESSURE_REAR : 7|32@0- (0.001,0) [0|0] "kPa"  Vector__XXX
+ SG_ THROTTLE_PERCENT : 39|16@0- (0.0001,0) [0|0] "ratio"  Vector__XXX
+
+BO_ 2636251141 Display_5: 8 C185
+ SG_ BPRESSURE_FRONT : 7|32@0- (0.001,0) [0|0] "kPa"  Vector__XXX
+ SG_ TorqueSetpointRR : 39|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ SpeedActualRL : 55|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251142 Display_6: 8 C185
+ SG_ TorqueSetpointRL : 7|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ SpeedActualFL : 23|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+ SG_ SpeedActualFR : 39|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+ SG_ SpeedActualRR : 55|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251143 Display_7: 8 C185
+ SG_ TorqueSetpointFL : 7|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ TorqueActualFL : 23|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ TorqueSetpointFR : 39|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ TorqueActualFR : 55|16@0- (10,0) [0|0] "m"  Vector__XXX
+
+BO_ 2636251144 Display_8: 8 C185
+ SG_ TorqueActualRR : 7|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ TorqueActualRL : 23|16@0- (10,0) [0|0] "m"  Vector__XXX
+ SG_ DClinkVoltageFrontActual : 39|32@0- (0.0001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251145 Display_9: 4 C185
+ SG_ DClinkVoltageRearActual : 7|32@0- (0.0001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251146 Display_10: 6 C185
+ SG_ Display_Page_Up_Button : 7|16@0- (1,0) [0|1] ""  Vector__XXX
+ SG_ Display_Page_Down_Button : 23|16@0- (1,0) [0|1] ""  Vector__XXX
+ SG_ Display_Page : 39|16@0- (1,0) [0|5] ""  Vector__XXX
+
+BO_ 2636251147 Display_11: 6 C185
+ SG_ CAN_1_Receive_Error_Count : 7|16@0- (1,0) [0|256] ""  Vector__XXX
+ SG_ CAN_2_Receive_Error_Count : 23|16@0- (1,0) [0|256] ""  Vector__XXX
+ SG_ CAN_3_Receive_Error_Count : 39|16@0- (1,0) [0|256] ""  Vector__XXX
+
+BO_ 2636251148 Display_12: 4 C185
+ SG_ BrakeTemp_FL_2 : 7|32@0- (0.1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251149 Display_13: 8 C185
+ SG_ Logging_Running : 7|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ Log_Time_Remaining : 23|16@0- (10,0) [0|0] "s"  Vector__XXX
+ SG_ CAN_1_Bus_Utilization : 39|16@0- (0.001,0) [0|0] "ratio"  Vector__XXX
+ SG_ CAN_2_Bus_Utilization : 55|16@0- (0.001,0) [0|0] "ratio"  Vector__XXX
+
+BO_ 2636251150 Display_14: 8 C185
+ SG_ CAN_3_Bus_Utilization : 7|16@0- (0.001,0) [0|0] "ratio"  Vector__XXX
+ SG_ BOARD_WORKING : 23|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ TOTAL_VOLT_2 : 39|32@0- (0.1,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251151 Display_15: 8 C185
+ SG_ IMD_RES_2 : 7|32@0- (10,0) [0|0] "ohm"  Vector__XXX
+ SG_ gyrZ_HR : 39|16@0- (0.001,0) [0|0] "rps"  Vector__XXX
+ SG_ gyrY_HR : 55|16@0- (0.001,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251152 Display_16: 6 C185
+ SG_ gyrX_HR : 7|16@0- (0.001,0) [0|0] "rps"  Vector__XXX
+ SG_ lon : 23|32@0- (1E-07,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251153 Display_17: 8 C185
+ SG_ lat : 7|32@0- (1E-07,0) [0|0] "deg"  Vector__XXX
+ SG_ velZ : 39|16@0- (0.1,0) [0|0] "km/h"  Vector__XXX
+ SG_ velY : 55|16@0- (0.1,0) [0|0] "km/h"  Vector__XXX
+
+BO_ 2636251154 Display_18: 6 C185
+ SG_ velX : 7|16@0- (0.1,0) [0|0] "km/h"  Vector__XXX
+ SG_ Latitude : 23|32@0- (1E-06,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251155 Display_19: 8 C185
+ SG_ Longitude : 7|32@0- (1E-06,0) [0|0] "deg"  Vector__XXX
+ SG_ PACK_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251156 Display_20: 8 C185
+ SG_ PACK_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ PACK_V_AVG : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251157 Display_21: 8 C185
+ SG_ PACK_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ PACK_T_AVG : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251158 Display_22: 8 C185
+ SG_ M0_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M0_V_MAX : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251159 Display_23: 8 C185
+ SG_ M0_T_MIN_THERM : 7|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ M0_T_MAX_THERM : 23|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ M1_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251160 Display_24: 8 C185
+ SG_ M1_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M1_T_MAX_THERM : 39|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ M2_T_MAX_THERM : 55|16@0- (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251161 Display_25: 8 C185
+ SG_ M10_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M10_V_MAX : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251162 Display_26: 8 C185
+ SG_ M10_T_MIN_THERM : 7|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ M10_T_MAX_THERM : 23|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ M11_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251163 Display_27: 6 C185
+ SG_ M11_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M11_T_MAX_THERM : 39|16@0- (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251164 Display_28: 8 C185
+ SG_ M2_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M2_V_MAX : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251165 Display_29: 8 C185
+ SG_ M2_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ M3_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251166 Display_30: 8 C185
+ SG_ M3_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M3_T_MAX : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251167 Display_31: 6 C185
+ SG_ M4_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ Accel2_Z : 39|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+
+BO_ 2636251168 Display_32: 8 C185
+ SG_ M4_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ M5_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251169 Display_33: 8 C185
+ SG_ M5_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M5_T_MAX : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251170 Display_34: 8 C185
+ SG_ M6_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M6_V_MAX : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251171 Display_35: 8 C185
+ SG_ M6_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ M7_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251172 Display_36: 8 C185
+ SG_ M7_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M7_T_MAX : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251173 Display_37: 8 C185
+ SG_ M8_V_MIN : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M8_V_MAX : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251174 Display_38: 8 C185
+ SG_ M8_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ M9_V_MIN : 39|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+
+BO_ 2636251175 Display_39: 8 C185
+ SG_ M9_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ M9_T_MAX : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251176 Display_40: 8 C185
+ SG_ M10_T_MAX : 7|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+ SG_ M11_T_MAX : 39|32@0- (0.01,0) [0|0] "C"  Vector__XXX
+
+BO_ 2636251177 Display_41: 8 C185
+ SG_ accX : 7|16@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ accY : 23|16@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ accZ : 39|16@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ accZ_HR : 55|16@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251178 Display_42: 8 C185
+ SG_ accY_HR : 7|16@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ accX_HR : 23|16@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ Yaw_2 : 39|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251179 Display_43: 8 C185
+ SG_ Pitch_2 : 7|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+ SG_ Yaw : 39|16@0- (0.01,0) [0|0] "deg"  Vector__XXX
+ SG_ Pitch : 55|16@0- (0.01,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251180 Display_44: 8 C185
+ SG_ ANG_RATE_YAW : 7|32@0- (1E-07,0) [0|0] "rps"  Vector__XXX
+ SG_ ANG_RATE_PITCH : 39|32@0- (1E-07,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251181 Display_45: 6 C185
+ SG_ ANG_RATE_ROLL : 7|32@0- (1E-07,0) [0|0] "rps"  Vector__XXX
+ SG_ SpeedSetpointRL : 39|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251182 Display_46: 8 C185
+ SG_ Az : 7|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+ SG_ Vx : 39|32@0- (0.0001,0) [0|0] "km/h"  Vector__XXX
+
+BO_ 2636251183 Display_47: 8 C185
+ SG_ Vy : 7|32@0- (0.0001,0) [0|0] "km/h"  Vector__XXX
+ SG_ SpeedSetpointFL : 39|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+ SG_ SpeedSetpointFR : 55|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+
+BO_ 2636251184 Display_48: 8 C185
+ SG_ SpeedSetpointRR : 7|16@0- (0.1,0) [0|0] "rps"  Vector__XXX
+ SG_ Dash_Temp : 23|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+ SG_ HV_ON : 39|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ CONT_FB : 55|16@0- (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251185 Display_49: 8 C185
+ SG_ CURRENT : 7|16@0- (0.1,0) [0|0] "A"  Vector__XXX
+ SG_ Accel1_X : 23|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel1_Y : 39|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel1_Z : 55|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+
+BO_ 2636251186 Display_50: 8 C185
+ SG_ Accel2_X : 7|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel2_Y : 23|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ PRECHARGE_COMPLETE : 39|16@0- (1,0) [0|0] ""  Vector__XXX
+ SG_ SD_COMPLETE : 55|16@0- (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251187 Display_51: 6 C185
+ SG_ DCcurrentActual : 7|16@0- (0.1,0) [0|0] "A"  Vector__XXX
+ SG_ FL_Tire_Temp_02_2 : 23|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251188 Display_52: 8 C185
+ SG_ FL_Tire_Temp_06_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ FL_Tire_Temp_10_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251189 Display_53: 8 C185
+ SG_ FL_Tire_Temp_14_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ FR_Tire_Temp_02_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251190 Display_54: 8 C185
+ SG_ FR_Tire_Temp_06_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ FR_Tire_Temp_10_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251191 Display_55: 8 C185
+ SG_ M4_V_MAX : 7|32@0- (0.001,0) [0|0] "V"  Vector__XXX
+ SG_ RL_Tire_Temp_02_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251192 Display_56: 8 C185
+ SG_ RL_Tire_Temp_06_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ RL_Tire_Temp_10_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251193 Display_57: 8 C185
+ SG_ RL_Tire_Temp_14_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ RR_Tire_Temp_02_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251194 Display_58: 8 C185
+ SG_ RR_Tire_Temp_06_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ RR_Tire_Temp_10_2 : 39|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251195 Display_59: 6 C185
+ SG_ RR_Tire_Temp_14_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+ SG_ MirrorControlEnable : 39|16@0- (1,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251196 Display_60: 8 C185
+ SG_ BrakeTemp_FR_2 : 7|32@0- (0.1,0) [0|0] ""  Vector__XXX
+ SG_ Angle1_3 : 39|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+
+BO_ 2636251197 Display_61: 8 C185
+ SG_ Angle2_3 : 7|32@0- (0.01,0) [0|0] "deg"  Vector__XXX
+ SG_ Accel1_X_3 : 39|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel1_Y_3 : 55|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+
+BO_ 2636251198 Display_62: 8 C185
+ SG_ Accel1_Z_3 : 7|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel2_X_3 : 23|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel2_Y_3 : 39|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+ SG_ Accel2_Z_3 : 55|16@0- (0.001,0) [0|0] "G"  Vector__XXX
+
+BO_ 2636251199 Display_63: 4 C185
+ SG_ FR_Tire_Temp_14_2 : 7|32@0- (0.01,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251200 Alarm_Message: 8 C185
+ SG_ Alarm_Message : 7|64@0+ (0,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251201 Alarm_Value: 8 C185
+ SG_ Alarm_Value : 7|64@0+ (0,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251202 Alarm_Status: 2 C185
+ SG_ Alarm_Active : 7|8@0+ (0,0) [0|0] ""  Vector__XXX
+ SG_ Alarm_Flash : 15|8@0+ (0,0) [0|0] ""  Vector__XXX
+
+BO_ 2636251136 CRC32: 4 C185
+ SG_ CRC32 : 7|32@0+ (1,0) [0|0] ""  Vector__XXX
+
+
+
+BA_DEF_  "MoTeC_CRC" INT 0 0;
+BA_DEF_ SG_  "MoTeC_Type" ENUM  "Number","Compound_String";
+BA_DEF_ SG_  "MoTeC_Usage" ENUM  "General","CRC32","Alarm_Message","Alarm_Value","Alarm_Active_State","Alarm_Flash_State";
+BA_DEF_ SG_  "MoTeC_Channel" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_DEF_  "MoTeC_CRC" 1738071530;
+BA_DEF_DEF_  "MoTeC_Type" "Number";
+BA_DEF_DEF_  "MoTeC_Usage" "General";
+BA_DEF_DEF_  "MoTeC_Channel" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 50;
+BA_ "GenMsgCycleTime" BO_ 2636251137 50;
+BA_ "GenMsgCycleTime" BO_ 2636251138 50;
+BA_ "GenMsgCycleTime" BO_ 2636251139 50;
+BA_ "GenMsgCycleTime" BO_ 2636251140 50;
+BA_ "GenMsgCycleTime" BO_ 2636251141 50;
+BA_ "GenMsgCycleTime" BO_ 2636251142 50;
+BA_ "GenMsgCycleTime" BO_ 2636251143 50;
+BA_ "GenMsgCycleTime" BO_ 2636251144 50;
+BA_ "GenMsgCycleTime" BO_ 2636251145 50;
+BA_ "GenMsgCycleTime" BO_ 2636251146 100;
+BA_ "GenMsgCycleTime" BO_ 2636251147 200;
+BA_ "GenMsgCycleTime" BO_ 2636251148 200;
+BA_ "GenMsgCycleTime" BO_ 2636251149 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251150 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251151 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251152 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251153 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251154 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251155 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251156 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251157 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251158 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251159 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251160 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251161 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251162 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251163 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251164 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251165 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251166 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251167 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251168 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251169 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251170 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251171 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251172 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251173 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251174 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251175 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251176 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251177 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251178 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251179 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251180 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251181 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251182 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251183 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251184 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251185 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251186 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251187 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251188 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251189 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251190 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251191 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251192 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251193 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251194 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251195 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251196 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251197 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251198 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251199 1000;
+BA_ "GenMsgCycleTime" BO_ 2636251200 50;
+BA_ "GenMsgCycleTime" BO_ 2636251201 50;
+BA_ "GenMsgCycleTime" BO_ 2636251202 50;
+BA_ "GenMsgCycleTime" BO_ 2636251136 1000;
+BA_ "MoTeC_Channel" SG_ 2636251137 Steering_Angle "Steering Angle";
+BA_ "MoTeC_Channel" SG_ 2636251137 SOC "SOC";
+BA_ "MoTeC_Channel" SG_ 2636251137 G_Force_Lat "G Force Lat";
+BA_ "MoTeC_Channel" SG_ 2636251138 G_Force_Long "G Force Long";
+BA_ "MoTeC_Channel" SG_ 2636251138 G_Force_Vert "G Force Vert";
+BA_ "MoTeC_Channel" SG_ 2636251138 Angle1 "Angle1";
+BA_ "MoTeC_Channel" SG_ 2636251139 Bat_Volts_Dash "Bat Volts Dash";
+BA_ "MoTeC_Channel" SG_ 2636251139 Angle2 "Angle2";
+BA_ "MoTeC_Channel" SG_ 2636251140 BPRESSURE_REAR "BPRESSURE REAR";
+BA_ "MoTeC_Channel" SG_ 2636251140 THROTTLE_PERCENT "THROTTLE PERCENT";
+BA_ "MoTeC_Channel" SG_ 2636251141 BPRESSURE_FRONT "BPRESSURE FRONT";
+BA_ "MoTeC_Channel" SG_ 2636251141 TorqueSetpointRR "TorqueSetpointRR";
+BA_ "MoTeC_Channel" SG_ 2636251141 SpeedActualRL "SpeedActualRL";
+BA_ "MoTeC_Channel" SG_ 2636251142 TorqueSetpointRL "TorqueSetpointRL";
+BA_ "MoTeC_Channel" SG_ 2636251142 SpeedActualFL "SpeedActualFL";
+BA_ "MoTeC_Channel" SG_ 2636251142 SpeedActualFR "SpeedActualFR";
+BA_ "MoTeC_Channel" SG_ 2636251142 SpeedActualRR "SpeedActualRR";
+BA_ "MoTeC_Channel" SG_ 2636251143 TorqueSetpointFL "TorqueSetpointFL";
+BA_ "MoTeC_Channel" SG_ 2636251143 TorqueActualFL "TorqueActualFL";
+BA_ "MoTeC_Channel" SG_ 2636251143 TorqueSetpointFR "TorqueSetpointFR";
+BA_ "MoTeC_Channel" SG_ 2636251143 TorqueActualFR "TorqueActualFR";
+BA_ "MoTeC_Channel" SG_ 2636251144 TorqueActualRR "TorqueActualRR";
+BA_ "MoTeC_Channel" SG_ 2636251144 TorqueActualRL "TorqueActualRL";
+BA_ "MoTeC_Channel" SG_ 2636251144 DClinkVoltageFrontActual "DClinkVoltageFrontActual";
+BA_ "MoTeC_Channel" SG_ 2636251145 DClinkVoltageRearActual "DClinkVoltageRearActual";
+BA_ "MoTeC_Channel" SG_ 2636251146 Display_Page_Up_Button "Display Page Up Button";
+BA_ "MoTeC_Channel" SG_ 2636251146 Display_Page_Down_Button "Display Page Down Button";
+BA_ "MoTeC_Channel" SG_ 2636251146 Display_Page "Display Page";
+BA_ "MoTeC_Channel" SG_ 2636251147 CAN_1_Receive_Error_Count "CAN 1 Receive Error Count";
+BA_ "MoTeC_Channel" SG_ 2636251147 CAN_2_Receive_Error_Count "CAN 2 Receive Error Count";
+BA_ "MoTeC_Channel" SG_ 2636251147 CAN_3_Receive_Error_Count "CAN 3 Receive Error Count";
+BA_ "MoTeC_Channel" SG_ 2636251148 BrakeTemp_FL_2 "BrakeTemp FL (2)";
+BA_ "MoTeC_Channel" SG_ 2636251149 Logging_Running "Logging Running";
+BA_ "MoTeC_Channel" SG_ 2636251149 Log_Time_Remaining "Log Time Remaining";
+BA_ "MoTeC_Channel" SG_ 2636251149 CAN_1_Bus_Utilization "CAN 1 Bus Utilization";
+BA_ "MoTeC_Channel" SG_ 2636251149 CAN_2_Bus_Utilization "CAN 2 Bus Utilization";
+BA_ "MoTeC_Channel" SG_ 2636251150 CAN_3_Bus_Utilization "CAN 3 Bus Utilization";
+BA_ "MoTeC_Channel" SG_ 2636251150 BOARD_WORKING "BOARD WORKING";
+BA_ "MoTeC_Channel" SG_ 2636251150 TOTAL_VOLT_2 "TOTAL VOLT (2)";
+BA_ "MoTeC_Channel" SG_ 2636251151 IMD_RES_2 "IMD RES (2)";
+BA_ "MoTeC_Channel" SG_ 2636251151 gyrZ_HR "gyrZ HR";
+BA_ "MoTeC_Channel" SG_ 2636251151 gyrY_HR "gyrY HR";
+BA_ "MoTeC_Channel" SG_ 2636251152 gyrX_HR "gyrX HR";
+BA_ "MoTeC_Channel" SG_ 2636251152 lon "lon";
+BA_ "MoTeC_Channel" SG_ 2636251153 lat "lat";
+BA_ "MoTeC_Channel" SG_ 2636251153 velZ "velZ";
+BA_ "MoTeC_Channel" SG_ 2636251153 velY "velY";
+BA_ "MoTeC_Channel" SG_ 2636251154 velX "velX";
+BA_ "MoTeC_Channel" SG_ 2636251154 Latitude "Latitude";
+BA_ "MoTeC_Channel" SG_ 2636251155 Longitude "Longitude";
+BA_ "MoTeC_Channel" SG_ 2636251155 PACK_V_MIN "PACK V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251156 PACK_V_MAX "PACK V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251156 PACK_V_AVG "PACK V AVG";
+BA_ "MoTeC_Channel" SG_ 2636251157 PACK_T_MAX "PACK T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251157 PACK_T_AVG "PACK T AVG";
+BA_ "MoTeC_Channel" SG_ 2636251158 M0_V_MIN "M0 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251158 M0_V_MAX "M0 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251159 M0_T_MIN_THERM "M0 T MIN THERM";
+BA_ "MoTeC_Channel" SG_ 2636251159 M0_T_MAX_THERM "M0 T MAX THERM";
+BA_ "MoTeC_Channel" SG_ 2636251159 M1_V_MIN "M1 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251160 M1_V_MAX "M1 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251160 M1_T_MAX_THERM "M1 T MAX THERM";
+BA_ "MoTeC_Channel" SG_ 2636251160 M2_T_MAX_THERM "M2 T MAX THERM";
+BA_ "MoTeC_Channel" SG_ 2636251161 M10_V_MIN "M10 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251161 M10_V_MAX "M10 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251162 M10_T_MIN_THERM "M10 T MIN THERM";
+BA_ "MoTeC_Channel" SG_ 2636251162 M10_T_MAX_THERM "M10 T MAX THERM";
+BA_ "MoTeC_Channel" SG_ 2636251162 M11_V_MIN "M11 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251163 M11_V_MAX "M11 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251163 M11_T_MAX_THERM "M11 T MAX THERM";
+BA_ "MoTeC_Channel" SG_ 2636251164 M2_V_MIN "M2 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251164 M2_V_MAX "M2 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251165 M2_T_MAX "M2 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251165 M3_V_MIN "M3 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251166 M3_V_MAX "M3 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251166 M3_T_MAX "M3 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251167 M4_V_MIN "M4 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251167 Accel2_Z "Accel2 Z";
+BA_ "MoTeC_Channel" SG_ 2636251168 M4_T_MAX "M4 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251168 M5_V_MIN "M5 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251169 M5_V_MAX "M5 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251169 M5_T_MAX "M5 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251170 M6_V_MIN "M6 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251170 M6_V_MAX "M6 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251171 M6_T_MAX "M6 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251171 M7_V_MIN "M7 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251172 M7_V_MAX "M7 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251172 M7_T_MAX "M7 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251173 M8_V_MIN "M8 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251173 M8_V_MAX "M8 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251174 M8_T_MAX "M8 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251174 M9_V_MIN "M9 V MIN";
+BA_ "MoTeC_Channel" SG_ 2636251175 M9_V_MAX "M9 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251175 M9_T_MAX "M9 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251176 M10_T_MAX "M10 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251176 M11_T_MAX "M11 T MAX";
+BA_ "MoTeC_Channel" SG_ 2636251177 accX "accX";
+BA_ "MoTeC_Channel" SG_ 2636251177 accY "accY";
+BA_ "MoTeC_Channel" SG_ 2636251177 accZ "accZ";
+BA_ "MoTeC_Channel" SG_ 2636251177 accZ_HR "accZ HR";
+BA_ "MoTeC_Channel" SG_ 2636251178 accY_HR "accY HR";
+BA_ "MoTeC_Channel" SG_ 2636251178 accX_HR "accX HR";
+BA_ "MoTeC_Channel" SG_ 2636251178 Yaw_2 "Yaw (2)";
+BA_ "MoTeC_Channel" SG_ 2636251179 Pitch_2 "Pitch (2)";
+BA_ "MoTeC_Channel" SG_ 2636251179 Yaw "Yaw";
+BA_ "MoTeC_Channel" SG_ 2636251179 Pitch "Pitch";
+BA_ "MoTeC_Channel" SG_ 2636251180 ANG_RATE_YAW "ANG RATE YAW";
+BA_ "MoTeC_Channel" SG_ 2636251180 ANG_RATE_PITCH "ANG RATE PITCH";
+BA_ "MoTeC_Channel" SG_ 2636251181 ANG_RATE_ROLL "ANG RATE ROLL";
+BA_ "MoTeC_Channel" SG_ 2636251181 SpeedSetpointRL "SpeedSetpointRL";
+BA_ "MoTeC_Channel" SG_ 2636251182 Az "Az";
+BA_ "MoTeC_Channel" SG_ 2636251182 Vx "Vx";
+BA_ "MoTeC_Channel" SG_ 2636251183 Vy "Vy";
+BA_ "MoTeC_Channel" SG_ 2636251183 SpeedSetpointFL "SpeedSetpointFL";
+BA_ "MoTeC_Channel" SG_ 2636251183 SpeedSetpointFR "SpeedSetpointFR";
+BA_ "MoTeC_Channel" SG_ 2636251184 SpeedSetpointRR "SpeedSetpointRR";
+BA_ "MoTeC_Channel" SG_ 2636251184 Dash_Temp "Dash Temp";
+BA_ "MoTeC_Channel" SG_ 2636251184 HV_ON "HV ON";
+BA_ "MoTeC_Channel" SG_ 2636251184 CONT_FB "CONT FB";
+BA_ "MoTeC_Channel" SG_ 2636251185 CURRENT "CURRENT";
+BA_ "MoTeC_Channel" SG_ 2636251185 Accel1_X "Accel1 X";
+BA_ "MoTeC_Channel" SG_ 2636251185 Accel1_Y "Accel1 Y";
+BA_ "MoTeC_Channel" SG_ 2636251185 Accel1_Z "Accel1 Z";
+BA_ "MoTeC_Channel" SG_ 2636251186 Accel2_X "Accel2 X";
+BA_ "MoTeC_Channel" SG_ 2636251186 Accel2_Y "Accel2 Y";
+BA_ "MoTeC_Channel" SG_ 2636251186 PRECHARGE_COMPLETE "PRECHARGE COMPLETE";
+BA_ "MoTeC_Channel" SG_ 2636251186 SD_COMPLETE "SD COMPLETE";
+BA_ "MoTeC_Channel" SG_ 2636251187 DCcurrentActual "DCcurrentActual";
+BA_ "MoTeC_Channel" SG_ 2636251187 FL_Tire_Temp_02_2 "FL Tire Temp 02 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251188 FL_Tire_Temp_06_2 "FL Tire Temp 06 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251188 FL_Tire_Temp_10_2 "FL Tire Temp 10 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251189 FL_Tire_Temp_14_2 "FL Tire Temp 14 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251189 FR_Tire_Temp_02_2 "FR Tire Temp 02 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251190 FR_Tire_Temp_06_2 "FR Tire Temp 06 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251190 FR_Tire_Temp_10_2 "FR Tire Temp 10 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251191 M4_V_MAX "M4 V MAX";
+BA_ "MoTeC_Channel" SG_ 2636251191 RL_Tire_Temp_02_2 "RL Tire Temp 02 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251192 RL_Tire_Temp_06_2 "RL Tire Temp 06 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251192 RL_Tire_Temp_10_2 "RL Tire Temp 10 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251193 RL_Tire_Temp_14_2 "RL Tire Temp 14 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251193 RR_Tire_Temp_02_2 "RR Tire Temp 02 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251194 RR_Tire_Temp_06_2 "RR Tire Temp 06 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251194 RR_Tire_Temp_10_2 "RR Tire Temp 10 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251195 RR_Tire_Temp_14_2 "RR Tire Temp 14 (2)";
+BA_ "MoTeC_Channel" SG_ 2636251195 MirrorControlEnable "MirrorControlEnable";
+BA_ "MoTeC_Channel" SG_ 2636251196 BrakeTemp_FR_2 "BrakeTemp FR (2)";
+BA_ "MoTeC_Channel" SG_ 2636251196 Angle1_3 "Angle1 (3)";
+BA_ "MoTeC_Channel" SG_ 2636251197 Angle2_3 "Angle2 (3)";
+BA_ "MoTeC_Channel" SG_ 2636251197 Accel1_X_3 "Accel1 X (3)";
+BA_ "MoTeC_Channel" SG_ 2636251197 Accel1_Y_3 "Accel1 Y (3)";
+BA_ "MoTeC_Channel" SG_ 2636251198 Accel1_Z_3 "Accel1 Z (3)";
+BA_ "MoTeC_Channel" SG_ 2636251198 Accel2_X_3 "Accel2 X (3)";
+BA_ "MoTeC_Channel" SG_ 2636251198 Accel2_Y_3 "Accel2 Y (3)";
+BA_ "MoTeC_Channel" SG_ 2636251198 Accel2_Z_3 "Accel2 Z (3)";
+BA_ "MoTeC_Channel" SG_ 2636251199 FR_Tire_Temp_14_2 "FR Tire Temp 14 (2)";
+BA_ "MoTeC_Type" SG_ 2636251200 Alarm_Message 1;
+BA_ "MoTeC_Usage" SG_ 2636251200 Alarm_Message 2;
+BA_ "MoTeC_Type" SG_ 2636251201 Alarm_Value 1;
+BA_ "MoTeC_Usage" SG_ 2636251201 Alarm_Value 3;
+BA_ "MoTeC_Usage" SG_ 2636251202 Alarm_Active 4;
+BA_ "MoTeC_Usage" SG_ 2636251202 Alarm_Flash 5;
+BA_ "MoTeC_Usage" SG_ 2636251136 CRC32 1;
+VAL_ 2636251195 MirrorControlEnable 0 "Control Disabled" 1 "Condition fulfilled" ;
