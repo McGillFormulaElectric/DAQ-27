@@ -1,0 +1,495 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Control_Unit Inverter
+VAL_TABLE_ Err_Internal_Fault 1 "internal inverter fault" 0 "no error" ;
+VAL_TABLE_ Err_Overtemperature 1 "overtemperature motor/inverter" 0 "no error" ;
+VAL_TABLE_ Err_ControlError 1 "control error current controller" 0 "no error" ;
+VAL_TABLE_ Err_Overspeed 1 "speed limit has been exceeded" 0 "no error" ;
+VAL_TABLE_ Err_Short_Circuit 1 "desat protection has triggered" 0 "no error" ;
+VAL_TABLE_ Err_Overcurrent 1 "overcurrent occured in a phase" 0 "no error" ;
+VAL_TABLE_ Err_Position_Sensor 1 "Error position sensor" 0 "no error" ;
+VAL_TABLE_ Err_Sum_Phase_Currents 1 "Sum phase currents implausible" 0 "no error" ;
+VAL_TABLE_ Err_Disable_Under_Load 1 "Received enable low under load" 0 "no error" ;
+VAL_TABLE_ Err_Timeout_Communication 1 "Timeout of communication" 0 "no error" ;
+VAL_TABLE_ Err_Motortemperature 1 "motor temp measurement faulty" 0 "no error" ;
+VAL_TABLE_ Err_DC_Undervoltage 1 "undervoltage occured" 0 "no error" ;
+VAL_TABLE_ Err_DC_Overvoltage 1 "overvoltage occured (>700V)" 0 "no error" ;
+VAL_TABLE_ Err_LV_Supply 1 "supply insufficient" 0 "no error" ;
+VAL_TABLE_ Err_ControlDisabled 1 "Enable low or Disable high" 0 "no error" ;
+VAL_TABLE_ AckErr 1 "Reset errorbits on rising edge" 0 "Errorbits remain latched" ;
+VAL_TABLE_ MirrorControlDisable 1 "Control disabled" 0 "Condition fulfilled" ;
+VAL_TABLE_ MirrorControlEnable 1 "Condition fulfilled" 0 "Control Disabled" ;
+VAL_TABLE_ DClinkGoodFront 1 "DC-Link voltage good for inv3+4" 0 "DC-Link voltage low for inv3+4" ;
+VAL_TABLE_ DClinkGoodRear 1 "DC-Link voltage good for inv1+2" 0 "DC-Link voltage low for inv1+2" ;
+VAL_TABLE_ DeratingIndication 1 "'Is-Max' is limited" 0 "'Is-Max' is not limited" ;
+VAL_TABLE_ InverterReady 1 "Ready" 0 "NotReady" ;
+VAL_TABLE_ InverterState 3 "Config values missing" 2 "Error" 1 "Drive" 0 "Idle" ;
+VAL_TABLE_ CurrentControl 1 "Current control" 0 "Speed or torque control" ;
+VAL_TABLE_ ASCallowed 1 "allowed" 0 "not allowed" ;
+VAL_TABLE_ ResetError 1 "reset error" 0 "-" ;
+VAL_TABLE_ EnableInverter 1 "enable control" 0 "disable control" ;
+
+
+BO_ 1040 GeneralTemperatureChannels: 8 Inverter
+ SG_ AdditionalTemperatureChannel4 : 48|12@1- (0.125,0) [-256|155] " C" Vector__XXX
+ SG_ AdditionalTemperatureChannel3 : 36|12@1- (0.125,0) [-256|155] " C" Vector__XXX
+ SG_ AdditionalTemperatureChannel2 : 24|12@1- (0.125,0) [-256|155] " C" Vector__XXX
+ SG_ AdditionalTemperatureChannel1 : 12|12@1- (0.125,0) [-256|155] " C" Vector__XXX
+ SG_ AdditionalTemperatureChannel0 : 0|12@1- (0.125,0) [-256|155] " C" Vector__XXX
+
+BO_ 1025 GeneralErrorbits: 8 Inverter
+ SG_ Err_InverterFL_Timeout_Comm : 23|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Sum_Phase_Currents : 59|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Short_Circuit : 55|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Position_Sensor : 31|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Overtemperature : 39|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Overspeed : 43|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Overcurrent : 51|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Motortemperature : 35|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Internal_Fault : 63|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_Disable_Under_Load : 27|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFL_ControlError : 47|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Timeout_Comm : 22|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Sum_Phase_Currents : 58|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Short_Circuit : 54|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Position_Sensor : 30|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Overtemperature : 38|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Overspeed : 42|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Overcurrent : 50|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Motortemperature : 34|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Internal_Fault : 62|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_Disable_Under_Load : 26|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_ControlError : 46|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_4_DC_Undervoltage : 3|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterFR_4_DC_Overvoltage : 5|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Timeout_Comm : 21|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Sum_Phase_Currents : 57|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Short_Circuit : 53|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Position_Sensor : 29|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Overtemperature : 37|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Overspeed : 41|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Overcurrent : 49|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Motortemperature : 33|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Internal_Fault : 61|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_Disable_Under_Load : 25|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRR_ControlError : 45|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Timeout_Comm : 20|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Sum_Phase_Currents : 56|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Short_Circuit : 52|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Position_Sensor : 28|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Overtemperature : 36|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Overspeed : 40|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Overcurrent : 48|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Motortemperature : 32|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Internal_Fault : 60|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_Disable_Under_Load : 24|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_ControlError : 44|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_2_DC_Undervoltage : 2|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_InverterRL_2_DC_Overvoltage : 4|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_LV_Supply : 1|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ Err_ControlDisabled : 0|1@1+ (1,0) [0|1] ""  Control_Unit
+
+BO_ 949 inverter4outboundB: 8 Inverter
+ SG_ SpeedActualFL : 48|16@1- (1,0) [-32768|32767] "RPM"  Control_Unit
+ SG_ IqActualFL : 36|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IqSetpointFL : 24|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdActualFL : 12|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdSetpointFL : 0|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+
+BO_ 933 inverter3outboundB: 8 Inverter
+ SG_ SpeedActualFR : 48|16@1- (1,0) [-32768|32767] "RPM"  Control_Unit
+ SG_ IqActualFR : 36|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IqSetpointFR : 24|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdActualFR : 12|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdSetpointFR : 0|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+
+BO_ 917 inverter2outboundB: 8 Inverter
+ SG_ SpeedActualRR : 48|16@1- (1,0) [-32768|32767] "RPM"  Control_Unit
+ SG_ IqActualRR : 36|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IqSetpointRR : 24|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdActualRR : 12|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdSetpointRR : 0|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+
+BO_ 947 inverter4outboundA: 8 Inverter
+ SG_ TemperaturePowerSwitchesFL : 52|12@1+ (0.0625,0) [0|255.9375] " C"  Control_Unit
+ SG_ TemperatureMotorFL : 40|12@1- (0.125,-0) [-256|255.875] " C"  Control_Unit
+ SG_ TorqueSetpointFL : 28|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ TorqueActualFL : 16|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ DeratingCurrentFL : 4|12@1+ (0.03125,0) [0|127.96875] "Arms"  Control_Unit
+ SG_ DeratingIndicationFL : 3|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterReadyFL : 2|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterStateFL : 0|2@1+ (1,0) [0|3] ""  Control_Unit
+
+BO_ 931 inverter3outboundA: 8 Inverter
+ SG_ TemperaturePowerSwitchesFR : 52|12@1+ (0.0625,0) [0|255.9375] " C"  Control_Unit
+ SG_ TemperatureMotorFR : 40|12@1- (0.125,-0) [-256|255.875] " C"  Control_Unit
+ SG_ TorqueSetpointFR : 28|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ TorqueActualFR : 16|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ DeratingCurrentFR : 4|12@1+ (0.03125,0) [0|127.96875] "Arms"  Control_Unit
+ SG_ DeratingIndicationFR : 3|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterReadyFR : 2|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterStateFR : 0|2@1+ (1,0) [0|3] ""  Control_Unit
+
+BO_ 915 inverter2outboundA: 8 Inverter
+ SG_ TemperaturePowerSwitchesRR : 52|12@1+ (0.0625,0) [0|255.9375] " C"  Control_Unit
+ SG_ TemperatureMotorRR : 40|12@1- (0.125,-0) [-256|255.875] " C"  Control_Unit
+ SG_ TorqueSetpointRR : 28|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ TorqueActualRR : 16|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ DeratingCurrentRR : 4|12@1+ (0.03125,0) [0|127.96875] "Arms"  Control_Unit
+ SG_ DeratingIndicationRR : 3|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterReadyRR : 2|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterStateRR : 0|2@1+ (1,0) [0|3] ""  Control_Unit
+
+BO_ 1024 GeneralOutbound: 8 Inverter
+ SG_ DCcurrentActual : 52|12@1- (0.25,0) [-512|511.75] "A" Vector__XXX
+ SG_ MirrorControlEnable : 50|1@1+ (1,0) [0|0] ""  Control_Unit
+ SG_ MirrorControlDisable : 51|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ DClinkGoodFront : 49|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ DClinkGoodRear : 48|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ SwitchingFrequency : 32|16@1+ (0.001953125,0) [0|127.998046875] "kHz"  Control_Unit
+ SG_ DClinkVoltageFrontActual : 16|16@1+ (0.015625,0) [0|1023.984375] "V"  Control_Unit
+ SG_ DClinkVoltageRearActual : 0|16@1+ (0.015625,0) [0|1023.984375] "V"  Control_Unit
+
+BO_ 901 inverter1outboundB: 8 Inverter
+ SG_ SpeedActualRL : 48|16@1- (1,0) [-32768|32767] "RPM"  Control_Unit
+ SG_ IqActualRL : 36|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IqSetpointRL : 24|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdActualRL : 12|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+ SG_ IdSetpointRL : 0|12@1- (0.0625,0) [-128|127.9375] "Arms"  Control_Unit
+
+BO_ 899 inverter1outboundA: 8 Inverter
+ SG_ TemperaturePowerSwitchesRL : 52|12@1+ (0.0625,0) [0|255.9375] " C"  Control_Unit
+ SG_ TemperatureMotorRL : 40|12@1- (0.125,-0) [-256|255.875] " C"  Control_Unit
+ SG_ TorqueSetpointRL : 28|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ TorqueActualRL : 16|12@1- (0.03125,0) [-64|63.96875] "Nm"  Control_Unit
+ SG_ DeratingCurrentRL : 4|12@1+ (0.03125,0) [0|127.96875] "Arms"  Control_Unit
+ SG_ DeratingIndicationRL : 3|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterReadyRL : 2|1@1+ (1,0) [0|1] ""  Control_Unit
+ SG_ InverterStateRL : 0|2@1+ (1,0) [0|3] ""  Control_Unit
+
+BO_ 438 inverter4setpoints: 8 Control_Unit
+ SG_ AckErrFL : 4|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ TorqueLimitNegativeFL : 48|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ TorqueLimitPositiveFL : 32|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ SpeedSetpointFL : 16|16@1- (1,0) [-32768|32767] "RPM"  Inverter
+ SG_ CurrentControlFL : 3|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ASCallowedFL : 2|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ResetErrorFL : 1|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ EnableInverterFL : 0|1@1+ (1,0) [0|1] ""  Inverter
+
+BO_ 422 inverter3setpoints: 8 Control_Unit
+ SG_ AckErrFR : 4|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ TorqueLimitNegativeFR : 48|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ TorqueLimitPositiveFR : 32|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ SpeedSetpointFR : 16|16@1- (1,0) [-32768|32767] "RPM"  Inverter
+ SG_ CurrentControlFR : 3|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ASCallowedFR : 2|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ResetErrorFR : 1|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ EnableInverterFR : 0|1@1+ (1,0) [0|1] ""  Inverter
+
+BO_ 406 inverter2setpoints: 8 Control_Unit
+ SG_ AckErrRR : 4|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ TorqueLimitNegativeRR : 48|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ TorqueLimitPositiveRR : 32|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ SpeedSetpointRR : 16|16@1- (1,0) [-32768|32767] "RPM"  Inverter
+ SG_ CurrentControlRR : 3|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ASCallowedRR : 2|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ResetErrorRR : 1|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ EnableInverterRR : 0|1@1+ (1,0) [0|1] ""  Inverter
+
+BO_ 390 inverter1setpoints: 8 Control_Unit
+ SG_ AckErrRL : 4|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ TorqueLimitNegativeRL : 48|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ TorqueLimitPositiveRL : 32|16@1- (0.00390625,0) [-128|127.99609375] "Nm"  Inverter
+ SG_ SpeedSetpointRL : 16|16@1- (1,0) [-32768|32767] "RPM"  Inverter
+ SG_ CurrentControlRL : 3|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ASCallowedRL : 2|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ ResetErrorRL : 1|1@1+ (1,0) [0|1] ""  Inverter
+ SG_ EnableInverterRL : 0|1@1+ (1,0) [0|1] ""  Inverter
+
+
+
+CM_ BO_ 1040 "General status message (outbound message) for all 4 inverters";
+CM_ SG_ 1040 AdditionalTemperatureChannel4 "Temperature is calculated for PT1000.";
+CM_ SG_ 1040 AdditionalTemperatureChannel3 "Temperature is calculated for PT1000.";
+CM_ SG_ 1040 AdditionalTemperatureChannel2 "Temperature is calculated for PT1000.";
+CM_ SG_ 1040 AdditionalTemperatureChannel1 "Temperature is calculated for PT1000.";
+CM_ SG_ 1040 AdditionalTemperatureChannel0 "Temperature is calculated for PT1000.";
+CM_ BO_ 1025 "Message for errorbits of all 4 inverters
+After an error, the errorbits are latched until the respective AckErr-signal is sent (reset on rising edge).
+All errorbits of the respective inverter (including general errors for all 4 or 2 inverters) are reset.";
+CM_ SG_ 1025 Err_InverterFL_Timeout_Comm "Latched Error [1 = No new setpoint message for inverter 4 was received for more than 50 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Sum_Phase_Currents "Latched Error [1 = The sum of the phase currents of inverter 4 was greater than 20A (there may be an insulation fault in the motor, a measurement error due to very strong EMI, or a wiring problem for parallel inverter operation), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Short_Circuit "Latched Error [1 =The desat (hardware overcurrent) protection of atleast one power switch of inverter 4 triggered (this could be due to a short circuit between two phases.), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Position_Sensor "Latched Error [1 = No valid position data for inverter 4 was received for more than 350  s (The communication may be disturbed by noise, or the sensor itself or the interface board may be defective), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Overtemperature "Latched Error [1 = Inverter 4 was deactivated because either the motor or the power switches got overheated, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Overspeed "Latched Error [1 = The configured speed limit (in the config) has been exceeded by motor 4, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Overcurrent "Latched Error [1 = An overcurrent in atleast one phase of inverter 4 was detected (more than 120A (175A for HV-Board_P1)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Motortemperature "Latched Error [1 = Motor temperature measurement of inverter 4 did not work for more than 500 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Internal_Fault "Latched Error [1 = Internal fault inverter 4, see Error.txt for more information (possible causes: measurement of phase currents, DC voltage, power switches temperature or gate driver supply (could also be triggered by insufficient supply)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_Disable_Under_Load "Latched Error [1 = The received enable signal of inverter 4 became low while motor was under load, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFL_ControlError "Latched Error [1 = The current controllers of inverter 4 were unable to achieve the setpoint currents (the reference point calibration is probably incorrect or the set voltage reserve may be too low), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Timeout_Comm "Latched Error [1 = No new setpoint message for inverter 3 was received for more than 50 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Sum_Phase_Currents "Latched Error [1 = The sum of the phase currents of inverter 3 was greater than 20A (there may be an insulation fault in the motor, a measurement error due to very strong EMI, or a wiring problem for parallel inverter operation), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Short_Circuit "Latched Error [1 =The desat (hardware overcurrent) protection of atleast one power switch of inverter 3 triggered (this could be due to a short circuit between two phases.), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Position_Sensor "Latched Error [1 = No valid position data for inverter 3 was received for more than 350  s (The communication may be disturbed by noise, or the sensor itself or the interface board may be defective), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Overtemperature "Latched Error [1 = Inverter 3 was deactivated because either the motor or the power switches got overheated, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Overspeed "Latched Error [1 = The configured speed limit (in the config) has been exceeded by motor 3, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Overcurrent "Latched Error [1 = An overcurrent in atleast one phase of inverter 3 was detected (more than 120A (175A for HV-Board_P1)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Motortemperature "Latched Error [1 = Motor temperature measurement of inverter 3 did not work for more than 500 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Internal_Fault "Latched Error [1 = Internal fault inverter 3, see Error.txt for more information (possible causes: measurement of phase currents, DC voltage, power switches temperature or gate driver supply (could also be triggered by insufficient supply)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_Disable_Under_Load "Latched Error [1 = The received enable signal of inverter 3 became low while motor was under load, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_ControlError "Latched Error [1 = The current controllers of inverter 3 were unable to achieve the setpoint currents (the reference point calibration is probably incorrect or the set voltage reserve may be too low), 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_4_DC_Undervoltage "Latched Error [1 = DC-Voltage dropped below defined treshold (in config) while inverter 3 or 4 was in drive state, 0 = no error]";
+CM_ SG_ 1025 Err_InverterFR_4_DC_Overvoltage "Latched Error [1 = A voltage exceeding 700V has occurred on the HV board of inverters 3&4, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Timeout_Comm "Latched Error [1 = No new setpoint message for inverter 2 was received for more than 50 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Sum_Phase_Currents "Latched Error [1 = The sum of the phase currents of inverter 2 was greater than 20A (there may be an insulation fault in the motor, a measurement error due to very strong EMI, or a wiring problem for parallel inverter operation), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Short_Circuit "Latched Error [1 =The desat (hardware overcurrent) protection of atleast one power switch of inverter 2 triggered (this could be due to a short circuit between two phases.), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Position_Sensor "Latched Error [1 = No valid position data for inverter 2 was received for more than 350  s (The communication may be disturbed by noise, or the sensor itself or the interface board may be defective), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Overtemperature "Latched Error [1 = Inverter 2 was deactivated because either the motor or the power switches got overheated, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Overspeed "Latched Error [1 = The configured speed limit (in the config) has been exceeded by motor 2, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Overcurrent "Latched Error [1 = An overcurrent in atleast one phase of inverter 2 was detected (more than 120A (175A for HV-Board_P1)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Motortemperature "Latched Error [1 = Motor temperature measurement of inverter 2 did not work for more than 500 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Internal_Fault "Latched Error [1 = Internal fault inverter 2, see Error.txt for more information (possible causes: measurement of phase currents, DC voltage, power switches temperature or gate driver supply (could also be triggered by insufficient supply)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_Disable_Under_Load "Latched Error [1 = The received enable signal of inverter 2 became low while motor was under load, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRR_ControlError "Latched Error [1 = The current controllers of inverter 2 were unable to achieve the setpoint currents (the reference point calibration is probably incorrect or the set voltage reserve may be too low), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Timeout_Comm "Latched Error [1 = No new setpoint message for inverter 1 was received for more than 50 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Sum_Phase_Currents "Latched Error [1 = The sum of the phase currents of inverter 1 was greater than 20A (there may be an insulation fault in the motor, a measurement error due to very strong EMI, or a wiring problem for parallel inverter operation), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Short_Circuit "Latched Error [1 =The desat (hardware overcurrent) protection of atleast one power switch of inverter 1 triggered (this could be due to a short circuit between two phases.), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Position_Sensor "Latched Error [1 = No valid position data for inverter 1 was received for more than 350  s (The communication may be disturbed by noise, or the sensor itself or the interface board may be defective), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Overtemperature "Latched Error [1 = Inverter 1 was deactivated because either the motor or the power switches got overheated, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Overspeed "Latched Error [1 = The configured speed limit (in the config) has been exceeded by motor 1, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Overcurrent "Latched Error [1 = An overcurrent in atleast one phase of inverter 1 was detected (more than 120A (175A for HV-Board_P1)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Motortemperature "Latched Error [1 = Motor temperature measurement of inverter 1 did not work for more than 500 ms, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Internal_Fault "Latched Error [1 = Internal fault inverter 1, see Error.txt for more information (possible causes: measurement of phase currents, DC voltage, power switches temperature or gate driver supply (could also be triggered by insufficient supply)), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_Disable_Under_Load "Latched Error [1 = The received enable signal of inverter 1 became low while motor was under load, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_ControlError "Latched Error [1 = The current controllers of inverter 1 were unable to achieve the setpoint currents (the reference point calibration is probably incorrect or the set voltage reserve may be too low), 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_2_DC_Undervoltage "Latched Error [1 = DC-Voltage dropped below defined treshold (in config) while inverter 1 or 2 was in drive state, 0 = no error]";
+CM_ SG_ 1025 Err_InverterRL_2_DC_Overvoltage "Latched Error [1 = A voltage exceeding 700V has occurred on the HV board of inverters 1&2, 0 = no error]";
+CM_ SG_ 1025 Err_LV_Supply "Latched Error [1 = atleast one of the internal voltage level had a voltage drop (either supply voltage dropped or internal failure), 0 = no error]";
+CM_ SG_ 1025 Err_ControlDisabled "Latched Error [1 = Control enable pin went low or control disable pin went high for more than 100  s while an inverter was in drive state, 0 = no error]";
+CM_ BO_ 949 "Second status message (outbound message) of inverter 4";
+CM_ SG_ 949 SpeedActualFL "Actual speed of motor";
+CM_ SG_ 949 IqActualFL "Actual Iq current";
+CM_ SG_ 949 IqSetpointFL "Setpoint for Iq current";
+CM_ SG_ 949 IdActualFL "Actual Id current";
+CM_ SG_ 949 IdSetpointFL "Setpoint for Id current";
+CM_ BO_ 933 "Second status message (outbound message) of inverter 3";
+CM_ SG_ 933 SpeedActualFR "Actual speed of motor";
+CM_ SG_ 933 IqActualFR "Actual Iq current";
+CM_ SG_ 933 IqSetpointFR "Setpoint for Iq current";
+CM_ SG_ 933 IdActualFR "Actual Id current";
+CM_ SG_ 933 IdSetpointFR "Setpoint for Id current";
+CM_ BO_ 917 "Second status message (outbound message) of inverter 2";
+CM_ SG_ 917 SpeedActualRR "Actual speed of motor";
+CM_ SG_ 917 IqActualRR "Actual Iq current";
+CM_ SG_ 917 IqSetpointRR "Setpoint for Iq current";
+CM_ SG_ 917 IdActualRR "Actual Id current";
+CM_ SG_ 917 IdSetpointRR "Setpoint for Id current";
+CM_ BO_ 947 "First status message (outbound message) of inverter 4";
+CM_ SG_ 947 TemperaturePowerSwitchesFL "Lowest measured temperature is approx. 27 C";
+CM_ SG_ 947 TemperatureMotorFL "Values are cut into range between -100 and +155  C if outside these boundaries.";
+CM_ SG_ 947 TorqueSetpointFL "Motor torque setpoint";
+CM_ SG_ 947 TorqueActualFL "Actual torque of motor";
+CM_ SG_ 947 DeratingCurrentFL "Maximum allowed current due to derating";
+CM_ SG_ 947 DeratingIndicationFL "1 = Due to derating, the currently permitted inverter/motor output current is lower than the specified value  Is-Max  in the config (this does not necessarily mean that the inverter is being derated at this moment)";
+CM_ SG_ 947 InverterReadyFL "1 = Inverter is ready to enter drive state, 0 = Not all conditions are met for the inverter to enter drive state";
+CM_ SG_ 947 InverterStateFL "State of inverter [0 = Idle, 1 = Drive, 2 = Error, 3 = config values missing]";
+CM_ BO_ 931 "First status message (outbound message) of inverter 3";
+CM_ SG_ 931 TemperaturePowerSwitchesFR "Lowest measured temperature is approx. 27 C";
+CM_ SG_ 931 TemperatureMotorFR "Values are cut into range between -100 and +155  C if outside these boundaries.";
+CM_ SG_ 931 TorqueSetpointFR "Motor torque setpoint";
+CM_ SG_ 931 TorqueActualFR "Actual torque of motor";
+CM_ SG_ 931 DeratingCurrentFR "Maximum allowed current due to derating";
+CM_ SG_ 931 DeratingIndicationFR "1 = Due to derating, the currently permitted inverter/motor output current is lower than the specified value  Is-Max  in the config (this does not necessarily mean that the inverter is being derated at this moment)";
+CM_ SG_ 931 InverterReadyFR "1 = Inverter is ready to enter drive state, 0 = Not all conditions are met for the inverter to enter drive state";
+CM_ SG_ 931 InverterStateFR "State of inverter [0 = Idle, 1 = Drive, 2 = Error, 3 = config values missing]";
+CM_ BO_ 915 "First status message (outbound message) of inverter 2";
+CM_ SG_ 915 TemperaturePowerSwitchesRR "Lowest measured temperature is approx. 27 C";
+CM_ SG_ 915 TemperatureMotorRR "Values are cut into range between -100 and +155  C if outside these boundaries.";
+CM_ SG_ 915 TorqueSetpointRR "Motor torque setpoint";
+CM_ SG_ 915 TorqueActualRR "Actual torque of motor";
+CM_ SG_ 915 DeratingCurrentRR "Maximum allowed current due to derating";
+CM_ SG_ 915 DeratingIndicationRR "1 = Due to derating, the currently permitted inverter/motor output current is lower than the specified value  Is-Max  in the config (this does not necessarily mean that the inverter is being derated at this moment)";
+CM_ SG_ 915 InverterReadyRR "1 = Inverter is ready to enter drive state, 0 = Not all conditions are met for the inverter to enter drive state";
+CM_ SG_ 915 InverterStateRR "State of inverter [0 = Idle, 1 = Drive, 2 = Error, 3 = config values missing]";
+CM_ BO_ 1024 "General status message (outbound message) for all 4 inverters";
+CM_ SG_ 1024 DCcurrentActual "Actual overall DC current of inverters 1 -4 (limited accuracy, not validated)";
+CM_ SG_ 1024 MirrorControlEnable "Mirror of  Control Enable  input";
+CM_ SG_ 1024 MirrorControlDisable "Mirror of  Control Disable  input";
+CM_ SG_ 1024 DClinkGoodFront "Indicates if DC-Link voltage for inverters 3 and 4 is above the minimum value defined in the config";
+CM_ SG_ 1024 DClinkGoodRear "Indicates if DC-Link voltage for inverters 1 and 2 is above the minimum value defined in the config";
+CM_ SG_ 1024 SwitchingFrequency "Current switching frequency ranging from 0 to 100kHz.";
+CM_ SG_ 1024 DClinkVoltageFrontActual "Current DC link voltage of inverters 3 and 4";
+CM_ SG_ 1024 DClinkVoltageRearActual "Current DC link voltage of inverters 1 and 2";
+CM_ BO_ 901 "Second status message (outbound message) of inverter 1";
+CM_ SG_ 901 SpeedActualRL "Actual speed of motor";
+CM_ SG_ 901 IqActualRL "Actual Iq current";
+CM_ SG_ 901 IqSetpointRL "Setpoint for Iq current";
+CM_ SG_ 901 IdActualRL "Actual Id current";
+CM_ SG_ 901 IdSetpointRL "Setpoint for Id current";
+CM_ BO_ 899 "First status message (outbound message) of inverter 1";
+CM_ SG_ 899 TemperaturePowerSwitchesRL "Lowest measured temperature is approx. 27 C";
+CM_ SG_ 899 TemperatureMotorRL "Values are cut into range between -100 and +155  C if outside these boundaries.";
+CM_ SG_ 899 TorqueSetpointRL "Motor torque setpoint";
+CM_ SG_ 899 TorqueActualRL "Actual torque of motor";
+CM_ SG_ 899 DeratingCurrentRL "Maximum allowed current due to derating";
+CM_ SG_ 899 DeratingIndicationRL "1 = Due to derating, the currently permitted inverter/motor output current is lower than the specified value  Is-Max  in the config (this does not necessarily mean that the inverter is being derated at this moment)";
+CM_ SG_ 899 InverterReadyRL "1 = Inverter is ready to enter drive state, 0 = Not all conditions are met for the inverter to enter drive state";
+CM_ SG_ 899 InverterStateRL "State of inverter [0 = Idle, 1 = Drive, 2 = Error, 3 = config values missing]";
+CM_ BO_ 438 "Control message (inbound message) for inverter 4.";
+CM_ SG_ 438 AckErrFL "Acknowledge Error [1 =Latched Errorbits will be reset to zero if signal changes 0-->1 and error is no longer present, 0 = Errorbits remain latched]";
+CM_ SG_ 438 TorqueLimitNegativeFL "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 438 TorqueLimitPositiveFL "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 438 SpeedSetpointFL "Will be limited to positive values by inverter.";
+CM_ SG_ 438 CurrentControlFL "Current control mode for test bench operation [1 = current control, 0 = Speed/Torque control] (do not use current mode in car!)";
+CM_ SG_ 438 ASCallowedFL "ASC allowed [1 = inverter enters ASC mode if necessary conditions are met, 0 = inverter stays in / switches to freewheeling mode during faults]";
+CM_ SG_ 438 ResetErrorFL "Reset Error [1 = reset error]";
+CM_ BO_ 422 "Control message (inbound message) for inverter 3.";
+CM_ SG_ 422 AckErrFR "Acknowledge Error [1 =Latched Errorbits will be reset to zero if signal changes 0-->1 and error is no longer present, 0 = Errorbits remain latched]";
+CM_ SG_ 422 TorqueLimitNegativeFR "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 422 TorqueLimitPositiveFR "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 422 SpeedSetpointFR "Will be limited to positive values by inverter.";
+CM_ SG_ 422 CurrentControlFR "Current control mode for test bench operation [1 = current control, 0 = Speed/Torque control] (do not use current mode in car!)";
+CM_ SG_ 422 ASCallowedFR "ASC allowed [1 = inverter enters ASC mode if necessary conditions are met, 0 = inverter stays in / switches to freewheeling mode during faults]";
+CM_ SG_ 422 ResetErrorFR "Reset Error [1 = reset error]";
+CM_ BO_ 406 "Control message (inbound message) for inverter 2.";
+CM_ SG_ 406 AckErrRR "Acknowledge Error [1 =Latched Errorbits will be reset to zero if signal changes 0-->1 and error is no longer present, 0 = Errorbits remain latched]";
+CM_ SG_ 406 TorqueLimitNegativeRR "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 406 TorqueLimitPositiveRR "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 406 SpeedSetpointRR "Will be limited to positive values by inverter.";
+CM_ SG_ 406 CurrentControlRR "Current control mode for test bench operation [1 = current control, 0 = Speed/Torque control] (do not use current mode in car!)";
+CM_ SG_ 406 ASCallowedRR "ASC allowed [1 = inverter enters ASC mode if necessary conditions are met, 0 = inverter stays in / switches to freewheeling mode during faults]";
+CM_ SG_ 406 ResetErrorRR "Reset Error [1 = reset error]";
+CM_ BO_ 390 "Control message (inbound message) for inverter 1.";
+CM_ SG_ 390 AckErrRL "Acknowledge Error [1 =Latched Errorbits will be reset to zero if signal changes 0-->1 and error is no longer present, 0 = Errorbits remain latched]";
+CM_ SG_ 390 TorqueLimitNegativeRL "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 390 TorqueLimitPositiveRL "Value will be cut to -64Nm and 63.998046875Nm if outside these boundaries.";
+CM_ SG_ 390 SpeedSetpointRL "Will be limited to positive values by inverter.";
+CM_ SG_ 390 CurrentControlRL "Current control mode for test bench operation [1 = current control, 0 = Speed/Torque control] (do not use current mode in car!)";
+CM_ SG_ 390 ASCallowedRL "ASC allowed [1 = inverter enters ASC mode if necessary conditions are met, 0 = inverter stays in / switches to freewheeling mode during faults]";
+CM_ SG_ 390 ResetErrorRL "Reset Error [1 = reset error]";
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 1025 Err_InverterFL_Timeout_Comm 1 "Timeout of communication" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Sum_Phase_Currents 1 "Sum phase currents implausible" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Short_Circuit 1 "desat protection has triggered" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Position_Sensor 1 "Error position sensor" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Overtemperature 1 "overtemperature motor/inverter" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Overspeed 1 "speed limit has been exceeded" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Overcurrent 1 "overcurrent occured in a phase" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Motortemperature 1 "motor temp measurement faulty" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Internal_Fault 1 "internal inverter fault" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_Disable_Under_Load 1 "Received enable low under load" 0 "no error" ;
+VAL_ 1025 Err_InverterFL_ControlError 1 "control error current controller" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Timeout_Comm 1 "Timeout of communication" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Sum_Phase_Currents 1 "Sum phase currents implausible" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Short_Circuit 1 "desat protection has triggered" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Position_Sensor 1 "Error position sensor" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Overtemperature 1 "overtemperature motor/inverter" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Overspeed 1 "speed limit has been exceeded" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Overcurrent 1 "overcurrent occured in a phase" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Motortemperature 1 "motor temp measurement faulty" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Internal_Fault 1 "internal inverter fault" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_Disable_Under_Load 1 "Received enable low under load" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_ControlError 1 "control error current controller" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_4_DC_Undervoltage 1 "undervoltage occured" 0 "no error" ;
+VAL_ 1025 Err_InverterFR_4_DC_Overvoltage 1 "overvoltage occured (>700V)" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Timeout_Comm 1 "Timeout of communication" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Sum_Phase_Currents 1 "Sum phase currents implausible" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Short_Circuit 1 "desat protection has triggered" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Position_Sensor 1 "Error position sensor" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Overtemperature 1 "overtemperature motor/inverter" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Overspeed 1 "speed limit has been exceeded" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Overcurrent 1 "overcurrent occured in a phase" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Motortemperature 1 "motor temp measurement faulty" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Internal_Fault 1 "internal inverter fault" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_Disable_Under_Load 1 "Received enable low under load" 0 "no error" ;
+VAL_ 1025 Err_InverterRR_ControlError 1 "control error current controller" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Timeout_Comm 1 "Timeout of communication" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Sum_Phase_Currents 1 "Sum phase currents implausible" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Short_Circuit 1 "desat protection has triggered" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Position_Sensor 1 "Error position sensor" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Overtemperature 1 "overtemperature motor/inverter" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Overspeed 1 "speed limit has been exceeded" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Overcurrent 1 "overcurrent occured in a phase" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Motortemperature 1 "motor temp measurement faulty" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Internal_Fault 1 "internal inverter fault" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_Disable_Under_Load 1 "Received enable low under load" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_ControlError 1 "control error current controller" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_2_DC_Undervoltage 1 "undervoltage occured" 0 "no error" ;
+VAL_ 1025 Err_InverterRL_2_DC_Overvoltage 1 "overvoltage occured (>700V)" 0 "no error" ;
+VAL_ 1025 Err_LV_Supply 1 "supply insufficient" 0 "no error" ;
+VAL_ 1025 Err_ControlDisabled 1 "Enable low or Disable high" 0 "no error" ;
+VAL_ 947 DeratingIndicationFL 1 "'Is-Max' is limitted" 0 "'Is-Max' is not limitted" ;
+VAL_ 947 InverterReadyFL 1 "Ready" 0 "NotReady" ;
+VAL_ 947 InverterStateFL 3 "Config values missing" 2 "Error" 1 "Drive" 0 "Idle" ;
+VAL_ 931 DeratingIndicationFR 1 "'Is-Max' is limitted" 0 "'Is-Max' is not limitted" ;
+VAL_ 931 InverterReadyFR 1 "Ready" 0 "NotReady" ;
+VAL_ 931 InverterStateFR 3 "Config values missing" 2 "Error" 1 "Drive" 0 "Idle" ;
+VAL_ 915 DeratingIndicationRR 1 "'Is-Max' is limitted" 0 "'Is-Max' is not limitted" ;
+VAL_ 915 InverterReadyRR 1 "Ready" 0 "NotReady" ;
+VAL_ 915 InverterStateRR 3 "Config values missing" 2 "Error" 1 "Drive" 0 "Idle" ;
+VAL_ 1024 MirrorControlEnable 1 "Condition fulfilled" 0 "Control Disabled" ;
+VAL_ 1024 MirrorControlDisable 1 "Control disabled" 0 "Condition fulfilled" ;
+VAL_ 1024 DClinkGoodFront 1 "DC-Link voltage good for inv3+4" 0 "DC-Link voltage low for inv3+4" ;
+VAL_ 1024 DClinkGoodRear 1 "DC-Link voltage good for inv1+2" 0 "DC-Link voltage low for inv1+2" ;
+VAL_ 899 DeratingIndicationRL 1 "'Is-Max' is limitted" 0 "'Is-Max' is not limitted" ;
+VAL_ 899 InverterReadyRL 1 "Ready" 0 "NotReady" ;
+VAL_ 899 InverterStateRL 3 "Config values missing" 2 "Error" 1 "Drive" 0 "Idle" ;
+VAL_ 438 AckErrFL 1 "Reset errorbits on rising edge" 0 "Errorbits remain latched" ;
+VAL_ 438 CurrentControlFL 1 "Current control" 0 "Speed or torque control" ;
+VAL_ 438 ASCallowedFL 1 "allowed" 0 "not allowed" ;
+VAL_ 438 ResetErrorFL 1 "reset error" 0 "-" ;
+VAL_ 438 EnableInverterFL 1 "enable control" 0 "disable control" ;
+VAL_ 422 AckErrFR 1 "Reset errorbits on rising edge" 0 "Errorbits remain latched" ;
+VAL_ 422 CurrentControlFR 1 "Current control" 0 "Speed or torque control" ;
+VAL_ 422 ASCallowedFR 1 "allowed" 0 "not allowed" ;
+VAL_ 422 ResetErrorFR 1 "reset error" 0 "-" ;
+VAL_ 422 EnableInverterFR 1 "enable control" 0 "disable control" ;
+VAL_ 406 AckErrRR 1 "Reset errorbits on rising edge" 0 "Errorbits remain latched" ;
+VAL_ 406 CurrentControlRR 1 "Current control" 0 "Speed or torque control" ;
+VAL_ 406 ASCallowedRR 1 "allowed" 0 "not allowed" ;
+VAL_ 406 ResetErrorRR 1 "reset error" 0 "-" ;
+VAL_ 406 EnableInverterRR 1 "enable control" 0 "disable control" ;
+VAL_ 390 AckErrRL 1 "Reset errorbits on rising edge" 0 "Errorbits remain latched" ;
+VAL_ 390 CurrentControlRL 1 "Current control" 0 "Speed or torque control" ;
+VAL_ 390 ASCallowedRL 1 "allowed" 0 "not allowed" ;
+VAL_ 390 ResetErrorRL 1 "reset error" 0 "-" ;
+VAL_ 390 EnableInverterRL 1 "enable control" 0 "disable control" ;
+
