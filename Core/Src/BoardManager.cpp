@@ -192,6 +192,8 @@ float KTY84_function(uint32_t adc_raw) {
     return (temp_c + 40.0f) / 0.1f;
 }
 
+
+
 float GE1711_function(uint32_t adc_raw)
 {
     if (adc_raw == 0 || adc_raw >= 65535u) {
@@ -224,8 +226,8 @@ float RE22_function(uint32_t adc_raw) {
 // BrakeRotorTemps DBC signals (800, 810) use factor 0.1 / offset 0,
 // so the temperature is pre-scaled to raw CAN counts here: raw = (T - offset) / factor.
 float INFKL800_function(uint32_t adc_raw) {
-  float voltage = (adc_raw / 65535.0f) * 10.0f;
-  float temp_c = (voltage*1000 - 500) / 5;
+  float voltage = (adc_raw / 65535.0f) * 5.0f;
+  float temp_c = (voltage*1000 - 400) / 30;
   return temp_c / 0.1f;
 }
 

@@ -115,7 +115,7 @@ int main(void)
   HAL_Delay(5);
   while (!bm_setup) {
 	  bm_setup = BoardManager_setup(bm);
-	  HAL_Delay(5);
+	  HAL_Delay(500);
   }
 
   uint8_t adc_num = 1;
@@ -140,7 +140,7 @@ int main(void)
 	   	   }
 
 	  printf("---\r\n\r\n");
-	  HAL_Delay(500);
+	  
 
 
   }
