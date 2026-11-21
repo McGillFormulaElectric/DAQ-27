@@ -1,0 +1,11 @@
+../Drivers/Device_Drivers/Src/ADXL366.cpp:14:1:ADXL366::ADXL366(SPIDriver&, IOPin&, ADXL366_config&, ADXL366_accel_data&)	24	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:29:6:bool ADXL366::write(uint8_t, uint8_t, uint8_t*)	64	dynamic
+../Drivers/Device_Drivers/Src/ADXL366.cpp:41:6:bool ADXL366::read(uint8_t, uint8_t, uint8_t*)	96	dynamic
+../Drivers/Device_Drivers/Src/ADXL366.cpp:61:6:bool ADXL366::check_ID(uint8_t, uint8_t, uint8_t*)	32	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:69:6:bool ADXL366::check_IDs(uint8_t*)	24	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:78:6:bool ADXL366::configure()	24	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:113:6:bool ADXL366::initialize()	24	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:133:6:bool ADXL366::readAccelData()	32	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:175:9:int16_t ADXL366::getX() const	16	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:179:9:int16_t ADXL366::getY() const	16	static
+../Drivers/Device_Drivers/Src/ADXL366.cpp:183:9:int16_t ADXL366::getZ() const	16	static
