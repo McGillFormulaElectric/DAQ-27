@@ -1,8 +1,14 @@
-name: stack/memory analysis
+name: CAN-Node stack/memory analysis
 
 on:
   push:
+    paths: ['CAN-Node/**', '.github/workflows/can-node.yml']
   pull_request:
+    paths: ['CAN-Node/**', '.github/workflows/can-node.yml']
+
+defaults:
+  run:
+    working-directory: CAN-Node
 
 permissions:
   contents: read
