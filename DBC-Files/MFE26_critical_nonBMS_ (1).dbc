@@ -1,0 +1,176 @@
+VERSION "MFE24 Critical nonBMS Master v3 (ascii-safe)"
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: BatteryMonitor Steering VehicleController
+
+BO_ 1985 IMU_Error: 1 Steering
+ SG_ Error : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 34 IMU_EulerAngles: 6 Steering
+ SG_ Yaw : 32|16@1- (0.0078125,0) [-180|180] "deg" Vector__XXX
+ SG_ Pitch : 16|16@1- (0.0078125,0) [-90|90] "deg" Vector__XXX
+ SG_ Roll : 0|16@1- (0.0078125,0) [-180|180] "deg" Vector__XXX
+
+BO_ 53 IMU_FreeAcceleration: 6 Steering
+ SG_ freeAccZ : 32|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+ SG_ freeAccY : 16|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+ SG_ freeAccX : 0|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+
+BO_ 97 IMU_RateOfTurnHR: 6 Steering
+ SG_ gyrZ_HR : 32|16@1- (0.001953125,0) [-35|35] "rad/s" Vector__XXX
+ SG_ gyrY_HR : 16|16@1- (0.001953125,0) [-35|35] "rad/s" Vector__XXX
+ SG_ gyrX_HR : 0|16@1- (0.001953125,0) [-35|35] "rad/s" Vector__XXX
+
+BO_ 98 IMU_AccelerationHR: 6 Steering
+ SG_ accZ_HR : 32|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+ SG_ accY_HR : 16|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+ SG_ accX_HR : 0|16@1- (0.00390625,0) [-100|100] "m/s2" Vector__XXX
+
+BO_ 113 IMU_Latitude: 8 Steering
+ SG_ lon : 32|32@1- (1.1921E-07,0) [-180|180] "deg" Vector__XXX
+ SG_ lat : 0|32@1- (5.9605E-08,0) [-90|90] "deg" Vector__XXX
+
+BO_ 118 IMU_VelocityXYZ: 6 Steering
+ SG_ velZ : 32|16@1- (0.015625,0) [-500|500] "m/s" Vector__XXX
+ SG_ velY : 16|16@1- (0.015625,0) [-500|500] "m/s" Vector__XXX
+ SG_ velX : 0|16@1- (0.015625,0) [-500|500] "m/s" Vector__XXX
+
+BO_ 688 LWS_Standard: 4 Steering
+ SG_ TRIM : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAL : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OK : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LWSSPEED : 16|8@1+ (4,0) [0|1020] "deg/s" Vector__XXX
+ SG_ LWSANGLE : 0|16@1- (0.1,0) [-780|780] "deg" Vector__XXX
+
+BO_ 1984 LWS_Config: 1 Steering
+ SG_ LWS_Config : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1313 IVT_Result_I: 6 BatteryMonitor
+ SG_ IVT_ID_I : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_I : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_I : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_I : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_I : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_I : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Current : 23|32@0- (0.001,0) [-800|800] "A" Vector__XXX
+
+BO_ 1314 IVT_Result_U1: 6 BatteryMonitor
+ SG_ IVT_ID_U1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_U1 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_U1 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_U1 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_U1 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_U1 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Voltage1 : 23|32@0- (0.001,0) [-1200|1200] "V" Vector__XXX
+
+BO_ 1315 IVT_Result_U2: 6 BatteryMonitor
+ SG_ IVT_ID_U2 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_U2 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_U2 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_U2 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_U2 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_U2 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Voltage2 : 23|32@0- (0.001,0) [-1200|1200] "V" Vector__XXX
+
+BO_ 1316 IVT_Result_U3: 6 BatteryMonitor
+ SG_ IVT_ID_U3 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_U3 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_U3 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_U3 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_U3 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_U3 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Voltage3 : 23|32@0- (0.001,0) [-1200|1200] "V" Vector__XXX
+
+BO_ 1317 IVT_Result_T: 6 BatteryMonitor
+ SG_ IVT_ID_T : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_T : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_T : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_T : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_T : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_T : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Temperature : 23|32@0- (0.1,0) [-500|2000] "degC" Vector__XXX
+
+BO_ 1318 IVT_Result_W: 6 BatteryMonitor
+ SG_ IVT_ID_W : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_W : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_W : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_W : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_W : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_W : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_Power : 23|32@0- (1,0) [-960000|960000] "W" Vector__XXX
+
+BO_ 1319 IVT_Result_As: 6 BatteryMonitor
+ SG_ IVT_ID_As : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_As : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_As : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_As : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_As : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_As : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_CurrentCounter : 23|32@0- (1,0) [-2147483648|2147483647] "As" Vector__XXX
+
+BO_ 1320 IVT_Result_Wh: 6 BatteryMonitor
+ SG_ IVT_ID_Wh : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_MsgCount_Wh : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IVT_SystemError_Wh : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_MeasError_Wh : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OutOfRange_Wh : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_OCS_Wh : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVT_EnergyCounter : 23|32@0- (1,0) [-2147483648|2147483647] "Wh" Vector__XXX
+
+BO_ 502 GPS_YPR_Az: 8 VehicleController
+ SG_ Yaw : 0|16@1+ (0.01,0) [0|360] "deg" Vector__XXX
+ SG_ Pitch : 16|16@1+ (0.01,0) [-90|90] "deg" Vector__XXX
+ SG_ Roll : 32|16@1+ (0.01,0) [-180|180] "deg" Vector__XXX
+ SG_ Az : 48|16@1+ (0.01,0) [0|360] "deg" Vector__XXX
+
+BO_ 503 GPS_Vxy_Axy: 8 VehicleController
+ SG_ Vx : 0|16@1+ (0.01,0) [-100|100] "m/s" Vector__XXX
+ SG_ Vy : 16|16@1+ (0.01,0) [-100|100] "m/s" Vector__XXX
+ SG_ Ax : 32|16@1+ (0.01,0) [-50|50] "m/s2" Vector__XXX
+ SG_ Ay : 48|16@1+ (0.01,0) [-50|50] "m/s2" Vector__XXX
+
+BO_ 504 GPS_AngRate: 8 VehicleController
+ SG_ ANG_RATE_YAW : 0|16@1+ (0.01,0) [-200|200] "deg/s" Vector__XXX
+ SG_ ANG_RATE_PITCH : 16|16@1+ (0.01,0) [-200|200] "deg/s" Vector__XXX
+ SG_ ANG_RATE_ROLL : 32|16@1+ (0.01,0) [-200|200] "deg/s" Vector__XXX
+
+BO_ 505 GPS_Lat_Long: 8 VehicleController
+ SG_ Latitude : 0|32@1+ (1e-06,0) [-90|90] "deg" Vector__XXX
+ SG_ Longitude : 32|32@1+ (1e-06,0) [-180|180] "deg" Vector__XXX
+
+BO_ 501 Pedal_Steering: 8 VehicleController
+ SG_ THROTTLE_PERCENT : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BPRESSURE_FRONT : 8|16@1+ (0.01,0) [0|650] "psi" Vector__XXX
+ SG_ BPRESSURE_REAR : 24|16@1+ (0.01,0) [0|650] "psi" Vector__XXX
+ SG_ STEERING_ANGLE : 40|8@1+ (1,0) [0|180] "deg" Vector__XXX

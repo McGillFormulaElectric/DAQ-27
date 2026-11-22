@@ -1,0 +1,416 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+BO_ 1 BMS_Status: 8 BMS
+ SG_ SD_COMPLETE : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PRECHARGE_COMPLETE : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_ON : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CONT_FB : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CHARGING_STATUS : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BALANCING_STATUS : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TOTAL_VOLT : 16|16@1+ (0.01, 0) [0|65535] "" Vector__XXX
+ SG_ CURRENT : 32|16@1+ (0.1,0) [0|65000] "A" Vector__XXX
+ SG_ IMD_RES : 48|16@1+ (1,0) [0|65000] "kOhms" Vector__XXX
+
+BO_ 15 BMS_VOLTAGE_STATUS: 8 Vector__XXX
+ SG_ MIN_VOLT : 0|16@1+ (0.001,1) [0|4500] "" Vector__XXX
+ SG_ MAX_VOLT : 16|16@1+ (0.001,1) [0|4500] "" Vector__XXX
+
+BO_ 261 BMS_M0_V1: 8 BMS
+ SG_ M0_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 262 BMS_M0_V2: 8 BMS
+ SG_ M0_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 263 BMS_M0_V3: 8 BMS
+ SG_ M0_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M0_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 268 BMS_M1_V1: 8 BMS
+ SG_ M1_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 269 BMS_M1_V2: 8 BMS
+ SG_ M1_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 270 BMS_M1_V3: 8 BMS
+ SG_ M1_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M1_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 275 BMS_M2_V1: 8 BMS
+ SG_ M2_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 276 BMS_M2_V2: 8 BMS
+ SG_ M2_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 277 BMS_M2_V3: 8 BMS
+ SG_ M2_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M2_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 282 BMS_M3_V1: 8 BMS
+ SG_ M3_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 283 BMS_M3_V2: 8 BMS
+ SG_ M3_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 284 BMS_M3_V3: 8 BMS
+ SG_ M3_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M3_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 289 BMS_M4_V1: 8 BMS
+ SG_ M4_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 290 BMS_M4_V2: 8 BMS
+ SG_ M4_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 291 BMS_M4_V3: 8 BMS
+ SG_ M4_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M4_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 296 BMS_M5_V1: 8 BMS
+ SG_ M5_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 297 BMS_M5_V2: 8 BMS
+ SG_ M5_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 298 BMS_M5_V3: 8 BMS
+ SG_ M5_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M5_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 303 BMS_M6_V1: 8 BMS
+ SG_ M6_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 304 BMS_M6_V2: 8 BMS
+ SG_ M6_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 305 BMS_M6_V3: 8 BMS
+ SG_ M6_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M6_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 310 BMS_M7_V1: 8 BMS
+ SG_ M7_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 311 BMS_M7_V2: 8 BMS
+ SG_ M7_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 312 BMS_M7_V3: 8 BMS
+ SG_ M7_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M7_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 317 BMS_M8_V1: 8 BMS
+ SG_ M8_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 318 BMS_M8_V2: 8 BMS
+ SG_ M8_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 319 BMS_M8_V3: 8 BMS
+ SG_ M8_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M8_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 324 BMS_M9_V1: 8 BMS
+ SG_ M9_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 325 BMS_M9_V2: 8 BMS
+ SG_ M9_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 326 BMS_M9_V3: 8 BMS
+ SG_ M9_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M9_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 331 BMS_M10_V1: 8 BMS
+ SG_ M10_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 332 BMS_M10_V2: 8 BMS
+ SG_ M10_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 333 BMS_M10_V3: 8 BMS
+ SG_ M10_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M10_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 338 BMS_M11_V1: 8 BMS
+ SG_ M11_V1 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V2 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V3 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V4 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 339 BMS_M11_V2: 8 BMS
+ SG_ M11_V5 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V6 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V7 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V8 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 340 BMS_M11_V3: 8 BMS
+ SG_ M11_V9 : 0|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V10 : 16|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V11 : 32|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+ SG_ M11_V12 : 48|16@1+ (0.001,0) [0|10] "V" Vector__XXX
+
+BO_ 264 BMS_M0_T1: 8 BMS
+ SG_ M0_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 265 BMS_M0_T2: 8 BMS
+ SG_ M0_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M0_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 271 BMS_M1_T1: 8 BMS
+ SG_ M1_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 272 BMS_M1_T2: 8 BMS
+ SG_ M1_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M1_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 278 BMS_M2_T1: 8 BMS
+ SG_ M2_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 279 BMS_M2_T2: 8 BMS
+ SG_ M2_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M2_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 285 BMS_M3_T1: 8 BMS
+ SG_ M3_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 286 BMS_M3_T2: 8 BMS
+ SG_ M3_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M3_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 292 BMS_M4_T1: 8 BMS
+ SG_ M4_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 293 BMS_M4_T2: 8 BMS
+ SG_ M4_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M4_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 299 BMS_M5_T1: 8 BMS
+ SG_ M5_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 300 BMS_M5_T2: 8 BMS
+ SG_ M5_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M5_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 306 BMS_M6_T1: 8 BMS
+ SG_ M6_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 307 BMS_M6_T2: 8 BMS
+ SG_ M6_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M6_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 313 BMS_M7_T1: 8 BMS
+ SG_ M7_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 314 BMS_M7_T2: 8 BMS
+ SG_ M7_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M7_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 320 BMS_M8_T1: 8 BMS
+ SG_ M8_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 321 BMS_M8_T2: 8 BMS
+ SG_ M8_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M8_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 327 BMS_M9_T1: 8 BMS
+ SG_ M9_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 328 BMS_M9_T2: 8 BMS
+ SG_ M9_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M9_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 334 BMS_M10_T1: 8 BMS
+ SG_ M10_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 335 BMS_M10_T2: 8 BMS
+ SG_ M10_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M10_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 341 BMS_M11_T1: 8 BMS
+ SG_ M11_T0 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T1 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T2 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T3 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+BO_ 342 BMS_M11_T2: 8 BMS
+ SG_ M11_T4 : 0|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T5 : 16|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T6 : 32|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+ SG_ M11_T7 : 48|16@1+ (0.01,0) [0|65000] "C" Vector__XXX
+
+
+
+
+
