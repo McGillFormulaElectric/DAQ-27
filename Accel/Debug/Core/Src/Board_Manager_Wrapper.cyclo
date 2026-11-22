@@ -1,3 +1,0 @@
-../Core/Src/Board_Manager_Wrapper.cpp:25:7:void* BoardManager_create(uint32_t, uint32_t)	4
-../Core/Src/Board_Manager_Wrapper.cpp:41:6:bool BoardManager_setup(void*)	2
-../Core/Src/Board_Manager_Wrapper.cpp:47:6:bool BoardManager_readTransmitAccelData(void*)	2

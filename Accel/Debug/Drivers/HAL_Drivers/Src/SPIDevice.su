@@ -1,4 +1,0 @@
-../Drivers/HAL_Drivers/Src/SPIDevice.cpp:10:1:SPIDevice::SPIDevice(SPIDriver&, IOPin&)	24	static
-../Drivers/HAL_Drivers/Src/SPIDevice.cpp:16:6:bool SPIDevice::transmit(uint8_t*, uint16_t)	32	static
-../Drivers/HAL_Drivers/Src/SPIDevice.cpp:24:6:bool SPIDevice::receive(uint8_t*, uint16_t)	32	static
-../Drivers/HAL_Drivers/Src/SPIDevice.cpp:32:6:bool SPIDevice::transmit_Receive(uint8_t*, uint16_t, uint8_t*, uint16_t)	40	static
