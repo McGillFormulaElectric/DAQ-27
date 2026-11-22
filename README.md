@@ -1,2 +1,2 @@
-# DAQ 27
+# DAQ
 Repo with all configs and codes used for the MFE27 DAQ system
