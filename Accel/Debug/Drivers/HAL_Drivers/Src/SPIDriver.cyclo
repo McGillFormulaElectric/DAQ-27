@@ -1,0 +1,7 @@
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:10:1:SPIDriver::SPIDriver(SPI_HandleTypeDef*, uint32_t)	1
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:16:6:bool SPIDriver::transmit(uint8_t*, uint16_t)	1
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:21:6:bool SPIDriver::transmit_Timeout(uint8_t*, uint16_t, uint32_t)	1
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:26:6:bool SPIDriver::receive(uint8_t*, uint16_t)	1
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:31:6:bool SPIDriver::receive_Timeout(uint8_t*, uint16_t, uint32_t)	1
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:36:6:bool SPIDriver::transmit_Receive(uint8_t*, uint16_t, uint8_t*, uint16_t)	2
+../Drivers/HAL_Drivers/Src/SPIDriver.cpp:46:6:bool SPIDriver::transmit_Receive_Timeout(uint8_t*, uint16_t, uint8_t*, uint16_t, uint32_t)	1
