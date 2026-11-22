@@ -12,4 +12,4 @@ Repo with all configs and codes used for the MFE27 DAQ system
 | [`MOTEC-Config/`](MOTEC-Config/) | MoTeC C185 and display-creator configs | `MOTEC-config` |
 
 Each folder is a self-contained project; open/import the folder itself (e.g. in STM32CubeIDE) rather than the repo root.
-CI for `CAN-Node` lives in `.github/workflows/can-node.yml` and only runs on changes under `CAN-Node/`.
+CI (`.github/workflows/firmware-build.yml`) builds the Debug configuration of `Accel`, `CAN-Node` and `RideHeight` with arm-none-eabi-gcc on every push/PR, using the settings from each project's `.cproject`. The built `.elf` files are uploaded as artifacts.
