@@ -3,8 +3,8 @@ Repo with all configs and codes used for the MFE27 DAQ system
 
 ## Projects
 
-| Folder | Description | Former branch |
-|---|---|---|
+| Folder | STM32 Project Name | Description | Former branch |
+|---|---|---|---|
 | [`Accel/`](Accel/) | Accelerometer board firmware (STM32G491KC) | `MFE27-Accel` |
 | [`CAN-Node/`](CAN-Node/) | Sensor CAN node firmware (STM32G491RE) + SIL tests | `MFE27-CAN-node` |
 | [`RideHeight/`](RideHeight/) | Mini ride-height sensor firmware (STM32G491KC) + SIL tests | `MFE27-RideHeight` |

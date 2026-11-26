@@ -37,7 +37,7 @@ The way to read that: the **application** decides *what* to read and *when* to s
 
 ## Hardware at a glance
 
-- **MCU:** STM32G491RETx, an ARM Cortex-M4. Everything is set up in STM32CubeIDE / CubeMX (`MFE26-Cannodes.ioc`).
+- **MCU:** STM32G491RETx, an ARM Cortex-M4. Everything is set up in STM32CubeIDE / CubeMX (`MFE27-CAN-Node.ioc`).
 - **Two TI ADS7066 ADCs** on **SPI1**. They share the clock and data lines (SCK/MISO/MOSI), but each one gets its own **chip select**, the pin that basically says "I'm talking to *you* right now." ADC 1 is `ADC_CS1` (PB10), ADC 2 is `ADC_CS2` (PB9).
 - **CAN:** FDCAN1 on PA11/PA12, classic CAN, 8-byte frames, running at **1 Mbit/s** (`NominalPrescaler = 5` with TimeSeg1 13 and TimeSeg2 2 on an 80 MHz FDCAN clock, so 80e6 / (5 × 16) = 1 Mbit/s).
 - **UART:** USART1 (PC4/PC5) at 115200 8N1, used purely for `printf` debug output.
@@ -274,10 +274,10 @@ A few known gaps are worth keeping in mind. The rot-pot conversion spans 0 to 36
 1. Open STM32CubeIDE and import the repository as an existing project.
 2. Confirm `isFrontNode` in `Core/Src/main.c` matches the board you're flashing.
 3. Build the `Debug` configuration.
-4. Connect the board through ST-LINK and use `MFE26-Cannodes Debug.launch` to program and debug it.
+4. Connect the board through ST-LINK and use `MFE27-CAN-Node Debug.launch` to program and debug it.
 5. Connect the CAN transceiver to a correctly terminated 1 Mbit/s bus with another active node, then watch USART1 for the startup and transmission logs.
 
-`MFE26-Cannodes.ioc` is the CubeMX source for the generated peripheral setup. When you regenerate, keep the code inside the STM32 `USER CODE` sections and review the resulting diff, especially the application code and peripheral timing.
+`MFE27-CAN-Node.ioc` is the CubeMX source for the generated peripheral setup. When you regenerate, keep the code inside the STM32 `USER CODE` sections and review the resulting diff, especially the application code and peripheral timing.
 
 ## Host software-in-the-loop tests
 
